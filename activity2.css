@@ -1,0 +1,25 @@
+body{
+background:gray;
+font-weight: bold;
+text-align: center;
+color:white;
+margin-left:25%;
+margin-right:25%;
+}
+#rohit1{
+background:#3C3B37;
+
+}
+#rohit2{
+background:#3C3B37;
+}
+#rohit3{
+background:#3C3B37;
+}
+#rohit{
+float:center;
+}
+input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
