@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+	var price = 120; 
+	var priceRegex = /[(0-9)+.?(0-9)*]+/igm; 
+	var price=priceRegex.test(price);    
+	document.getElementById("demo").innerHTML = price;
+}
+</script>
+
+</body>
+</html>
