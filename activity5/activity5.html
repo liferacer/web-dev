@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Activity 5 </title>
+	<style> 
+		div{ 
+		background:red; 
+width:100%; 
+text-align:center; 
+border-radius:25px 25px 0px 0px;} 
+form{ 
+text-align:center; 
+border:solid 5px; 
+border-color:#ccc; 
+width:20%; 
+border-radius:25px 25px 0px 0px; 
+} 
+</style> 
+</head>
+<body>
+<html> 
+<body> 
+<center> 
+<form onsubmit="f1()" name="myform"> 
+<div>Attendance Report</div><br><br> 
+<input type="text" name="uname" placeholder="Username"></input><br><br> 
+<input type="text" name="regno" placeholder="Register Number"></input><br><br> 
+<select id="sem" name="drop"> 
+<option>WINTER SEMESTER 2015~16</option> 
+<option>FALL SEMESTER 2016-17</option> 
+<option>WINTER SEMESTER 2016-17</option> 
+<option>INTER SEMESTER 2016-17</option> 
+</select><br><br> 
+<input type="submit" id="button" name="get" value="Get Attendance"></input> 
+</form> 
+</center> 
+</body> 
+
+<script> 
+function f1() { 
+    var x = document.forms["myform"]["uname"].value; 
+    if (x == "") { 
+        alert("Username must be filled out"); 
+        return false; 
+    } 
+    
+    var y = document.forms["myform"]["regno"].value; 
+    if (y == "") { 
+        alert("Register number must be filled out"); 
+        return false; 
+    } 
+
+    var z = document.forms["myform"]["drop"].value; 
+
+	var text = { 
+		"student":[ 
+ 			   {"reg":"14BCE0405", "m1":"CSE101=95"}, 
+  			  {"reg":"14BCE0555", "m1":"CSE101=100"}, 
+   			  {"reg":"14BCE0666", "m1":"CSE101=90"} 
+			] 
+		   } 
+var count= text.student.length; 
+for (i = 0; i <count; i++) { 
+    if(y==text.student[i].reg) 
+	{ 
+	k=text.student[i].m1; 
+	break; 
+	} 
+} 
+if (x != ""&& y!="") { 
+alert(x+"\n"+y+"\n"+z+"\n"+k); 
+return false; 
+} 
+} 
+</script> 
+<body>
+</html>

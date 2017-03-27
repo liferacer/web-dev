@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>activity2</title>
+	<style type="text/css">
+	    body{
+	    	background-color: #808080;
+	    }
+		#main{
+			width: 600px;
+			height: 500px;
+			background-color: #3C3B37;
+			margin: auto;
+			font-weight: bold;
+			text-align: center;
+			color: white;
+		}
+		input{
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+		select{
+			margin-top: 8px;
+			margin-bottom: 8px;
+			margin-left: 4px;
+			margin-right: 4px
+		}
+		
+	</style>
+</head>
+<body>
+<div id="main">
+	<fieldset>
+		<legend> Personal Information</legend>
+		Email Address:<input type="text" name="email"><br>
+		Password:<input type="password" name="password"><br>
+		Gender:<select name="Gender">
+			<option>male</option>
+			<option>female</option>
+			<option>other</option>
+		</select><br>
+		Date of birth:<input type="text" name="dob" placeholder="dd/mm/yy">
+	</fieldset>
+	<fieldset>
+		<legend>Preference</legend>
+		Fav color:<input type="radio" name="radio">red
+		<input type="radio" name="radio">blue
+		<input type="radio" name="radio">other<br>
+		Interests:<input type="checkbox" name="cb">news
+		<input type="checkbox" name="cb">sports
+		<input type="checkbox" name="cb">entertainment languages	
+		<select name="lang">
+			<option>english</option>
+			<option>french</option>
+			<option>hindi</option>
+			<option>other</option>
+		</select>
+	</fieldset>
+	<fieldset>
+	    <legend>Comment</legend>
+		<textarea  name="textarea" rows="4" cols="50"></textarea><br>
+		upload a file<input type="file" name="file">
+		<input type="submit" name="submit details">
+	</fieldset>
+</div>
+</body>
+</html>

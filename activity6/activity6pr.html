@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>activity 3</title>
+	<style type="text/css">
+	body{
+		background-color: white;
+	}
+		#main{
+			width: 600px;
+			height: 620px;
+			background-color: #C0C0C0;
+			float:right;
+			margin-right: 30%;
+		}
+		#inner{
+			width: 550px;
+			height: 570px;
+			background-color: white;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			margin-top: 20px;  
+			border-radius: 15px;
+		}
+		#innerbox{
+			width: 100%;
+			height: 60px;
+			background-color: #F85351;
+			border-top-left-radius:15px;
+			border-top-right-radius: 15px;
+			color: white;
+			font-weight: bold;
+			text-align: center;
+			padding-top: 15px;
+			font-size: 20px;
+		}
+		input,select{
+			height: 40px;
+			width: 480px;
+			margin-left: 30px;
+			margin-right: 60px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			font-weight: bold;
+			font-size: 15px;
+			padding-left:5px; 
+			background-color: #F3F3F2;
+		}
+		#sign{
+			width: 480px;
+			height: 40px;
+			background-color: #F3F3F2;
+		}
+		#radio{
+			height: 15px;
+			width: 10px;
+
+		}
+	</style>
+</head>
+<body>
+<div id="main">
+	<div id="inner">
+		<div id="innerbox">VIT University<br>Student Information</div>
+		<form action="displaypr.php" method="post">
+			<input type="text" name="name" placeholder="Name">
+			<input type="text" name="regnum" placeholder="Registration number"><br>
+			<input id="radio" type="radio" name="gender">male
+			<input id="radio" type="radio" name="gender">female
+	    	<input type="text" name="email" placeholder="email id">
+			<input type="text" name="mobile number" placeholder="mobile number">
+			<select>
+				<option>CSE</option>
+				<option>IT</option>
+			</select>
+			<input  id="submit" type="submit" name="submit" value="submit info">
+		</form>
+	</div>
+</div>
+</body>
+</html>

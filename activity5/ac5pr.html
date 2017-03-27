@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>activity 3</title>
+	<style type="text/css">
+	body{
+		background-color: white;
+	}
+		#main{
+			width: 600px;
+			height: 400px;
+			background-color: #C0C0C0;
+			float:right;
+			margin-right: 30%;
+		}
+		#inner{
+			width: 550px;
+			height: 350px;
+			background-color: white;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			margin-top: 20px;  
+			border-radius: 15px;
+		}
+		#innerbox{
+			width: 100%;
+			height: 40px;
+			background-color: #F85351;
+			border-top-left-radius:15px;
+			border-top-right-radius: 15px;
+			color: white;
+			font-weight: bold;
+			text-align: center;
+			padding-top: 15px;
+			font-size: 20px;
+		}
+		input, select{
+			height: 40px;
+			width: 480px;
+			margin-left: 30px;
+			margin-right: 60px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			font-weight: bold;
+			font-size: 15px;
+			padding-left:5px; 
+			background-color: #F3F3F2;
+			color: black;
+		}
+		#sign{
+			width: 480px;
+			height: 40px;
+			background-color: #F3F3F2;
+			color: black;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function f1(){
+			var x=document.forms["form"]["username"].value;
+			if(x==""){
+				alert("please enter the username");	
+			}
+
+			var y=document.forms["form"]["reg number"].value;
+			if(y==""){
+				alert("please enter the reg number");
+			}
+
+			var z=document.forms["form"]["Attendance"].value;
+
+			var text={
+				"student":[
+				{"reg":"14BCE0395","sub":"CSE101=95"},
+				{"reg":"14BCE0396","sub":"CSE101=95"},
+				{"reg":"14BCE0397","sub":"CSE101=95"},
+				]
+			};
+
+			var count=text.student.length;
+			for(i=0;i<count;i++){
+				if(y==text.student[i].reg){
+					k=text.student[i].sub;
+					break;
+				}
+			}
+
+			if(x!=""&&y!=""){
+				alert(x+"\n"+y+"\n"+z+"\n"+k);
+			}
+
+			
+			var exp=/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/;
+			if(exp.test(x)){
+			alert("number should be in the range of 5 characters");
+		}
+	}
+
+	</script>
+</head>
+<body>
+<div id="main">
+	<div id="inner">
+		<div id="innerbox">Attendance Report</div>
+		<form name="form" onsubmit="f1()">
+			<input type="text" name="username" placeholder="Username">
+			<input type="text" name="reg number" placeholder="Registration number">
+	   		 <select name="Attendance">
+	    		<option>WINTER SEM 2015-2016</option>
+	    		<option>FALL SEM 2016-2017</option>
+	    		<option>WINTER SEM 2016-2017</option>
+	    		<option>INTER SEM 2016-2017</option>
+	   		 </select>
+		   	<input  id="sign" type="submit" name="submit" value="Get Attendance">
+		</form>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+.head,form 
+{  	border-color:black; 
+	margin-left:500px;
+	margin-top:40px;
+} 
+.head 
+{ 
+	text-align:center; 
+	background-color:#DFF0D8; 
+	color:#3C763D; 
+	width:40%; 	
+} 
+form 
+{ 
+	padding:2%; 
+	width:36%; 
+	padding:auto; 
+} 
+.long 
+{ 
+	width:100%; 
+	padding-top:10px;
+	padding-bottom:10px; 
+	height:30px;
+	border-radius:5px;
+	text-align:left;
+	padding-left:10px;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-family:bold;
+	font-size:20px;
+} 
+.button 
+{ 
+	width:100%; 
+	padding:5px 0; 
+	color:white; 
+	background-color:#5CB85C; 
+	height:50px;
+	border-radius:5px;
+    font-family:bold;	
+	font-size:30px;
+}
+select{
+height:40px;
+width:100%;
+}
+h3{
+font-family:bold;	
+font-size:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html> 
+<head> 
+<title>Activity 11</title> 
+<link rel=stylesheet type="text/css" href="style.css"> 
+<head> 
+
+<body> 
+<div class="main">
+<div class="head"> 
+<h3>VIT University</h3> 
+<i>Student Information<i><br><br> 
+</div> 
+<form action="display.php" method="post"> 
+<input class="long" type="text" name="name" placeholder="Name" required><br><br> 
+<input class="long" type="text" name="regno" placeholder="Registration Number" required><br><br> 
+<input type="radio" name="gender" value="Male" checked> Male 
+<input type="radio" name="gender" value="Female"> Female<br><br> 
+<input class="long" type="text" name="email" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br><br> 
+<input class="long" type="text" name="mobile" placeholder="Mobile Number" pattern="[0-9]{10}" required><br><br> 
+<select name="branch" required> 
+	<option value="CSE">CSE</option> 
+	<option value="IT">IT</option> 
+</select><br><br><br> 
+<input class="button" type="submit" value="Submit Information"> 
+</form> 
+</div>
+</body> 
+</html> 
